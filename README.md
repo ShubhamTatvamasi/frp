@@ -23,5 +23,5 @@ kubectl apply -f k8s
 
 Test your private cluster:
 ```bash
-kubectl --insecure-skip-tls-verify=true get pods
+kubectl --insecure-skip-tls-verify get pods
 ```
