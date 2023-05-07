@@ -26,6 +26,14 @@ Deploy the Client:
 kubectl apply -f k8s/client
 ```
 
+Create a nginx pod and expose it:
+```bash
+kubectl run nginx --image nginx:alpine
+kubectl expose pod nginx --port 80
+```
+
+### Kubeconfig
+
 Test your private cluster:
 ```bash
 kubectl --insecure-skip-tls-verify get pods
