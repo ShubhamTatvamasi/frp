@@ -8,3 +8,4 @@ services:
     network_mode: host
     volumes:
       - ./frpc.ini:/etc/frp/frpc.ini
+      - /tmp/files:/tmp/files

@@ -29,3 +29,7 @@ spec:
     port: 2222
     protocol: TCP
     targetPort: 2222
+  - name: static-files
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
