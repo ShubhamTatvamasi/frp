@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frpc
+  name: frpc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frpc
+  template:
+    metadata:
+      labels:
+        app: frpc
+    spec:
+      containers:
+      - image: fatedier/frpc:v0.48.0
+        name: frpc
+        command: ["/usr/bin/frpc", "--config", "/etc/frp/frpc.ini"]
+        volumeMounts:
+        - name: frpc-volume
+          subPath: frpc.ini
+          mountPath: /etc/frp/frpc.ini
+      volumes:
+      - name: frpc-volume
+        configMap:
+          name: frpc-config

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frpc-config
+data:
+  frpc.ini: |
+    [common]
+    server_addr = k8s.shubhamtatvamasi.com
+    server_port = 7000
+
+    [web]
+    type = http
+    local_ip = nginx
+    local_port = 80
+    subdomain = nginx

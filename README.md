@@ -4,12 +4,12 @@ https://github.com/fatedier/frp
 
 ### Docker
 
-Start the server:
+Start the Server:
 ```bash
 docker-compose -f docker-compose-server.yml up
 ```
 
-Start the client:
+Start the Client:
 ```bash
 docker-compose -f docker-compose-client.yml up
 ```
@@ -18,7 +18,12 @@ docker-compose -f docker-compose-client.yml up
 
 Deploy the Server:
 ```bash
-kubectl apply -f k8s
+kubectl apply -f k8s/server
+```
+
+Deploy the Client:
+```bash
+kubectl apply -f k8s/client
 ```
 
 Test your private cluster:
