@@ -11,3 +11,4 @@ data:
     dashboard_pwd = admin
     vhost_http_port = 80
     vhost_https_port = 443
+    subdomain_host = k8s.shubhamtatvamasi.com
