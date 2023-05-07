@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frps
+  name: frps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frps
+  template:
+    metadata:
+      labels:
+        app: frps
+    spec:
+      containers:
+      - image: fatedier/frps:v0.48.0
+        name: frps
+        command: ["/usr/bin/frps", "--config", "/etc/frp/frps.ini"]
+        volumeMounts:
+        - name: frps-volume
+          subPath: frps.ini
+          mountPath: /etc/frp/frps.ini
+      volumes:
+      - name: frps-volume
+        configMap:
+          name: frps-config
