@@ -25,3 +25,10 @@ Test your private cluster:
 ```bash
 kubectl --insecure-skip-tls-verify get pods
 ```
+
+### SSH
+
+SSH into the server:
+```bash
+ssh ubuntu@k8s.shubhamtatvamasi.com -p 2222
+```
