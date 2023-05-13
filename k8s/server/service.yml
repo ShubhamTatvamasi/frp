@@ -25,6 +25,10 @@ spec:
     port: 443
     protocol: TCP
     targetPort: 443
+  - name: ssh-k8s
+    port: 22
+    protocol: TCP
+    targetPort: 22
   - name: ssh-port
     port: 2222
     protocol: TCP

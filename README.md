@@ -43,5 +43,8 @@ kubectl --insecure-skip-tls-verify get pods
 
 SSH into the server:
 ```bash
+ssh ubuntu@k8s.shubhamtatvamasi.com
+
+# custom port
 ssh ubuntu@k8s.shubhamtatvamasi.com -p 2222
 ```
