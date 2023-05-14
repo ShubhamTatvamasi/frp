@@ -1,0 +1,20 @@
+---
+- name: Copy frpc config file
+  template:
+    src: frpc.ini.j2
+    dest: "/etc/frp/frpc.ini"
+
+- name: Copy frpc service file
+  template:
+    src: frpc.service.j2
+    dest: "/etc/systemd/system/frpc.service"
+
+- name: Enable service frpc
+  service:
+    name: frpc
+    enabled: yes
+
+- name: Restart service frpc
+  service:
+    name: frpc
+    state: restarted

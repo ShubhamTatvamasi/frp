@@ -3,3 +3,4 @@
   hosts: all
   roles:
     - role: frp
+    - role: frpc

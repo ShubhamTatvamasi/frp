@@ -1,0 +1,11 @@
+[Unit]
+Description=frpc
+
+[Service]
+User={{ ansible_user }}
+WorkingDirectory=/etc/frp
+ExecStart=frpc
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

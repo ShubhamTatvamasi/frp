@@ -1,0 +1,3 @@
+---
+- import_tasks: start-frpc.yml
+  become: yes
