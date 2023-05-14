@@ -28,3 +28,8 @@
   with_items:
     - frpc.ini
     - frps.ini
+
+- name: Delete frp tmp files
+  file:
+    state: absent
+    path: /tmp/frp_{{ frp_version }}_linux_amd64
