@@ -1,0 +1,30 @@
+---
+- name: Download frp {{ frp_version }}
+  unarchive:
+    src: https://github.com/fatedier/frp/releases/download/v{{ frp_version }}/frp_{{ frp_version }}_linux_amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy frp to executable path
+  copy:
+    src: /tmp/frp_{{ frp_version }}_linux_amd64/{{ item }}
+    dest: /usr/local/bin/{{ item }}
+    remote_src: yes
+    mode: '+x'
+  with_items:
+    - frpc
+    - frps
+
+- name: Create frp config directory
+  file:
+    path: /etc/frp
+    state: directory
+
+- name: Copy frp config files
+  copy:
+    src: /tmp/frp_{{ frp_version }}_linux_amd64/{{ item }}
+    dest: /etc/frp/{{ item }}
+    remote_src: yes
+  with_items:
+    - frpc.ini
+    - frps.ini

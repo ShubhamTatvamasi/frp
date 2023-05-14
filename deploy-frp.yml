@@ -1,0 +1,5 @@
+---
+- name: Deploy frp
+  hosts: all
+  roles:
+    - role: frp

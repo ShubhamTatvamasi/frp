@@ -48,3 +48,9 @@ ssh ubuntu@k8s.shubhamtatvamasi.com
 # custom port
 ssh ubuntu@k8s.shubhamtatvamasi.com -p 2222
 ```
+
+### Ansible
+
+```bash
+ansible-playbook deploy-frp.yml
+```

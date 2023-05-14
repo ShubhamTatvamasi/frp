@@ -1,0 +1,3 @@
+---
+- import_tasks: download-frp.yml
+  become: yes
