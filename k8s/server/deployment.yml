@@ -15,7 +15,7 @@ spec:
         app: frps
     spec:
       containers:
-      - image: fatedier/frps:v0.48.0
+      - image: fatedier/frps:v0.49.0
         name: frps
         command: ["/usr/bin/frps", "--config", "/etc/frp/frps.ini"]
         volumeMounts:
