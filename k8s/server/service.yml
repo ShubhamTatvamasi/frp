@@ -37,3 +37,11 @@ spec:
     port: 3000
     protocol: TCP
     targetPort: 3000
+  - name: wireguard-vpn
+    port: 51820
+    protocol: UDP
+    targetPort: 51820
+  - name: wireguard-dashboard
+    port: 51821
+    protocol: TCP
+    targetPort: 51821
