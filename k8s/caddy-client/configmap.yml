@@ -13,10 +13,10 @@ data:
     type = http
     local_ip = caddy-ingress-controller
     local_port = 80
-    custom_domains = nginx.frp.shubhamtatvamasi.com
+    custom_domains = nginx.k8s.shubhamtatvamasi.com
 
     [caddy_https]
     type = https
     local_ip = caddy-ingress-controller
     local_port = 443
-    custom_domains = nginx.frp.shubhamtatvamasi.com
+    custom_domains = nginx.k8s.shubhamtatvamasi.com
