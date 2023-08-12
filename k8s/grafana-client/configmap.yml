@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frpc-config
+  namespace: grafana
+data:
+  frpc.ini: |
+    [common]
+    server_addr = k8s.shubhamtatvamasi.com
+    server_port = 7000
+
+    [web]
+    type = http
+    local_ip = grafana
+    local_port = 80
+    subdomain = grafana

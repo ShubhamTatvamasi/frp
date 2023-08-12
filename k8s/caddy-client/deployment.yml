@@ -16,7 +16,7 @@ spec:
         app: frpc
     spec:
       containers:
-      - image: fatedier/frpc:v0.50.0
+      - image: fatedier/frpc:v0.51.2
         name: frpc
         command: ["/usr/bin/frpc", "--config", "/etc/frp/frpc.ini"]
         volumeMounts:

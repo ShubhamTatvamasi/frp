@@ -4,6 +4,7 @@ metadata:
   labels:
     app: frpc
   name: frpc
+  namespace: grafana
 spec:
   replicas: 1
   selector:
