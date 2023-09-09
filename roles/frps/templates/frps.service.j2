@@ -1,0 +1,11 @@
+[Unit]
+Description=frps
+
+[Service]
+User=root
+WorkingDirectory=/etc/frp
+ExecStart=frps --config /etc/frp/frps.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

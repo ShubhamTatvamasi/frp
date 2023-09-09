@@ -4,3 +4,4 @@
   roles:
     - role: frp
     - role: frpc
+    - role: frps
