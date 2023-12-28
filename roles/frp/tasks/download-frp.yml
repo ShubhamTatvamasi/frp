@@ -26,8 +26,8 @@
     dest: /etc/frp/{{ item }}
     remote_src: yes
   with_items:
-    - frpc.ini
-    - frps.ini
+    - frpc.toml
+    - frps.toml
 
 - name: Delete frp tmp files
   file:
