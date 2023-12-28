@@ -4,7 +4,8 @@ Description=frpc
 [Service]
 User={{ ansible_user }}
 WorkingDirectory=/etc/frp
-ExecStart=frpc
+ExecStart=frpc \
+  --config=frpc.toml
 Restart=always
 
 [Install]
