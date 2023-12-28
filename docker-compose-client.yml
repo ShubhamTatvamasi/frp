@@ -4,8 +4,8 @@ services:
     container_name: frpc
     image: fatedier/frpc:v0.53.2
     restart: unless-stopped
-    command: --config /etc/frp/frpc.ini
+    command: --config /etc/frp/frpc.toml
     network_mode: host
     volumes:
-      - ./frpc.ini:/etc/frp/frpc.ini
+      - ./frpc.toml:/etc/frp/frpc.toml
       - /tmp/files:/tmp/files

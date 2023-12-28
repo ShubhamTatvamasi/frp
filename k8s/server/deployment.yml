@@ -17,11 +17,11 @@ spec:
       containers:
       - image: fatedier/frps:v0.53.2
         name: frps
-        command: ["/usr/bin/frps", "--config", "/etc/frp/frps.ini"]
+        command: ["/usr/bin/frps", "--config", "/etc/frp/frps.toml"]
         volumeMounts:
         - name: frps-volume
-          subPath: frps.ini
-          mountPath: /etc/frp/frps.ini
+          subPath: frps.toml
+          mountPath: /etc/frp/frps.toml
       volumes:
       - name: frps-volume
         configMap:

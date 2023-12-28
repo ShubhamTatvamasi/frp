@@ -4,10 +4,10 @@ services:
     container_name: frps
     image: fatedier/frps:v0.53.2
     restart: unless-stopped
-    command: --config /etc/frp/frps.ini
+    command: --config /etc/frp/frps.toml
     ports:
       - "7000:7000/tcp"
       - "7000:7000/udp"
       - "7500:7500"
     volumes:
-      - ./frps.ini:/etc/frp/frps.ini
+      - ./frps.toml:/etc/frp/frps.toml

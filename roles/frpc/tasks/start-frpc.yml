@@ -1,8 +1,8 @@
 ---
 - name: Copy frpc config file
   template:
-    src: frpc.ini.j2
-    dest: "/etc/frp/frpc.ini"
+    src: frpc.toml.j2
+    dest: "/etc/frp/frpc.toml"
 
 - name: Copy frpc service file
   template:

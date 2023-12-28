@@ -18,11 +18,11 @@ spec:
       containers:
       - image: fatedier/frpc:v0.53.2
         name: frpc
-        command: ["/usr/bin/frpc", "--config", "/etc/frp/frpc.ini"]
+        command: ["/usr/bin/frpc", "--config", "/etc/frp/frpc.toml"]
         volumeMounts:
         - name: frpc-volume
-          subPath: frpc.ini
-          mountPath: /etc/frp/frpc.ini
+          subPath: frpc.toml
+          mountPath: /etc/frp/frpc.toml
       volumes:
       - name: frpc-volume
         configMap:

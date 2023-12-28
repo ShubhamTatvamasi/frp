@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: frps-config
 data:
-  frps.ini: |
+  frps.toml: |
     [common]
     bind_port = 7000
     dashboard_port = 7500

@@ -4,7 +4,7 @@ metadata:
   name: frpc-config
   namespace: caddy-system
 data:
-  frpc.ini: |
+  frpc.toml: |
     [common]
     server_addr = k8s.shubhamtatvamasi.com
     server_port = 7000
