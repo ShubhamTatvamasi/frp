@@ -1,8 +1,10 @@
-[common]
-server_addr = {{ server_addr }}
-server_port = 7000
+serverAddr = "{{ server_addr }}"
+serverPort = 7000
+auth.token = "{{ frp_token }}"
 
-[ssh]
-type = tcp
-local_port = 22
-remote_port = {{ remote_port }}
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 6000
