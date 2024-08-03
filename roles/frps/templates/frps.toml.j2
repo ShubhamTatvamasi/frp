@@ -1,7 +1,8 @@
 bindPort = 7000
 webServer.addr = "0.0.0.0"
 webServer.port = 7500
-webServer.user = "{{ frps_user }}"
-webServer.password = "{{ frps_password }}"
 vhostHTTPPort = 80
 vhostHTTPSPort = 443
+webServer.user = "{{ frp_user }}"
+webServer.password = "{{ frp_password }}"
+auth.token = "{{ frp_token }}"
