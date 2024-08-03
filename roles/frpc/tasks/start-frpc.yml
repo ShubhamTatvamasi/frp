@@ -1,4 +1,9 @@
 ---
+- name: Remove frps config file
+  file:
+    state: absent
+    path: /etc/frp/frps.toml
+
 - name: Copy frpc config file
   template:
     src: frpc.toml.j2
